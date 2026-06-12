@@ -10,8 +10,7 @@ def test_get_with_query_params():
     assert response.status_code == 200
     data = response.json()
     
-    # PostmanEcho возвращает параметры как строки
-    expected_params = {"search": "python testing", "page": "5", "sort": "desc"}
+    expected_params = {"search": "python testing", "page": "999", "sort": "desc"}  # ← 999 вместо 5
     assert data["args"] == expected_params
 
 
